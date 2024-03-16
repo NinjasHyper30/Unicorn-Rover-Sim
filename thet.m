@@ -1,3 +1,3 @@
 function [theta] = thet(t)
-theta=pi/4;
+theta=0;
 end
