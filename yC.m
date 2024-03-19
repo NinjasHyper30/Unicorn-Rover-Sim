@@ -1,23 +1,17 @@
 function [y] = yC(t)
-if t<=3.5
-    y=0;
-elseif t<=8.5
-    t0=t-3.5;
-    y=t0*t0;
-elseif t<=13.5
-    t0=t-8.5;
-    y=25+10*t0-t0*t0;
-elseif t<=18.5
-    t0=t-13.5;
-    y=50-0.5*t0*t0;
-elseif t<=23.5
-    t0=t-18.5;
-    y=37.5-5*t0+0.5*t0*t0;
-elseif t<=27.1
-    y=25;
+if t<=7.53
+    theta=0.5*(t+exp(-0.8*t)*1.25-1.25);
+    y=10*sin(theta-pi/2)+10;
+elseif t<=20.1
+    t0=t-7.53;
+    theta=pi-0.5*t0;
+    y=10*sin(theta-3*pi/2)+30;
+elseif t<=26.35
+    t0=t-20.1;
+    theta=0.5*t0-pi;
+    y=10*sin(theta-pi/2)+10;
 else
-    t0=t-27.1;
-    w=-0.2*(t0+exp(-0.3*t0)/0.3-1/0.3);
-    y=25*sin(w+pi/2); 
+    y=0;
+end
 
 end

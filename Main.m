@@ -25,14 +25,14 @@ plot(inTraj(:,1),inTraj(:,2));
 grid on;
 xlabel('X(meters)'); ylabel("Y(meters)");
 title('INPUT PATH');
-axis([-5 55 -5 55]);
+% axis([-5 55 -5 55]);
 
 subplot(1,2,2);
 plot(outTraj(:,1),outTraj(:,2),'m');
 grid on;
 xlabel('X(meters)'); ylabel("Y(meters)");
 title('OUTPUT PATH');
-axis([-5 55 -5 55]);
+% axis([-5 55 -5 55]);
 
 %ploting orientation
 figure(2);
@@ -61,7 +61,7 @@ plot(outTraj(:,1),outTraj(:,2),'g--');
 xlabel('X(meters)'); ylabel("Y(meters)");
 title('PATH');
 legend('Input path','Output path');
-axis([-5 55 -5 55]);
+% axis([-5 55 -5 55]);
 
 
 subplot(1,2,2);
